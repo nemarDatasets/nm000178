@@ -1,0 +1,294 @@
+_dataset:
+  class: BNCI2020_001
+  code: BNCI2020-001
+  doi: 10.3389/fnins.2020.00849
+  interval:
+  - -2
+  - 3
+  n_subjects: 45
+  paradigm: imagery
+abstract: Reaching and grasping is an essential part of everybody's life, it allows meaningful interaction with the environment
+  and is key to independent lifestyle. Recent electroencephalogram (EEG)-based studies have already shown that neural correlates
+  of natural reach-and-grasp actions can be identified in the EEG. However, it is still in question whether these results
+  obtained in a laboratory environment can make the transition to mobile applicable EEG systems for home use. In the current
+  study, we investigated whether EEG-based correlates of natural reach-and-grasp actions can be successfully identified and
+  decoded using mobile EEG systems, namely the water-based EEG-Versatile system and the dry-electrodes EEG-Hero headset. In
+  addition, we also analyzed gel-based recordings obtained in a laboratory environment (g.USBamp/g.Ladybird, gold standard),
+  which followed the same experimental parameters. For each recording system, 15 study participants performed 80 self-initiated
+  reach-and-grasp actions toward a glass (palmar grasp) and a spoon (lateral grasp). Our results confirmed that EEG-based
+  correlates of reach-and-grasp actions can be successfully identified using these mobile systems. In a single-trial multiclass-based
+  decoding approach, which incorporated both movement conditions and rest, we could show that the low frequency time domain
+  (LFTD) correlates were also decodable. Grand average peak accuracy calculated on unseen test data yielded for the water-based
+  electrode system 62.3% (9.2% STD), whereas for the dry-electrodes headset reached 56.4% (8% STD). For the gel-based electrode
+  system 61.3% (8.6% STD) could be achieved. To foster and promote further investigations in the field of EEG-based movement
+  decoding, as well as to allow the interested community to make their own conclusions, we provide all datasets publicly available
+  in the BNCI Horizon 2020 database.
+acquisition:
+  auxiliary_channels:
+    eog_channels: 6
+    eog_type:
+    - horizontal
+    - vertical
+    has_eog: true
+  channel_types:
+    eeg: 58
+    eog: 6
+  electrode_type: active
+  filters: 8th order Chebyshev filter from 0.01 to 100 Hz, 50 Hz notch
+  ground: AFz
+  hardware: g.tec USBamp/g.tec Ladybird
+  line_freq: 50.0
+  montage: 5% grid system
+  n_channels: 58
+  reference: right earlobe
+  sampling_rate: 256.0
+  sensor_type: Gel-based active electrodes
+  sensors:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - CCP1h
+  - CCP2h
+  - CCP3h
+  - CCP4h
+  - CCP5h
+  - CCP6h
+  - CP1
+  - CP2
+  - CP3
+  - CP4
+  - CP5
+  - CP6
+  - CPP1h
+  - CPP2h
+  - CPP3h
+  - CPP4h
+  - CPP5h
+  - CPP6h
+  - CPz
+  - Cz
+  - EOGLBottom
+  - EOGLSide
+  - EOGLTop
+  - EOGRBottom
+  - EOGRSide
+  - EOGRTop
+  - F1
+  - F2
+  - F3
+  - F4
+  - FC1
+  - FC2
+  - FC3
+  - FC4
+  - FC5
+  - FC6
+  - FCC1h
+  - FCC2h
+  - FCC3h
+  - FCC4h
+  - FCC5h
+  - FCC6h
+  - FCz
+  - FFC1h
+  - FFC2h
+  - FFC3h
+  - FFC4h
+  - Fz
+  - P1
+  - P2
+  - P3
+  - P4
+  - P5
+  - P6
+  - POz
+  - PPO1h
+  - PPO2h
+  - Pz
+bci_application:
+  applications:
+  - grasp neuroprosthesis
+  - motor neuroprosthesis
+  - robotic arm
+  environment: laboratory
+contributing_labs:
+- Institute of Neural Engineering, Graz University of Technology
+- Bitbrain
+cross_validation:
+  cv_folds: 5
+  cv_method: 10 times 5-fold cross-validation
+  evaluation_type:
+  - within_subject
+data_structure:
+  n_blocks: 4
+  n_trials: 80
+  n_trials_per_class:
+    lateral_grasp: 80
+    palmar_grasp: 80
+    rest: 81
+  trials_context: per_class
+documentation:
+  associated_paper_doi: 10.3389/fnins.2020.00849
+  contact_info:
+  - gernot.mueller@tugraz.at
+  country: Austria
+  data_url: https://bnci-horizon-2020.eu/database/data-sets
+  description: This study investigated whether EEG-based correlates of natural reach-and-grasp actions can be successfully
+    identified and decoded using mobile EEG systems (water-based EEG-Versatile and dry-electrodes EEG-Hero headset) and gel-based
+    recordings obtained in a laboratory environment (g.USBamp/g.Ladybird, gold standard). For each recording system, 15 study
+    participants performed 80 self-initiated reach-and-grasp actions toward a glass (palmar grasp) and a spoon (lateral grasp).
+  doi: 10.3389/fnins.2020.00849
+  ethics_approval:
+  - 'Medical University of Graz (EK: 30-439 ex 17/18)'
+  funding:
+  - Horizon 2020 Project MoreGrasp
+  institution: Institute of Neural Engineering, Graz University of Technology
+  institution_address: Graz, Austria
+  institution_department: Institute of Neural Engineering
+  investigators:
+  - Andreas Schwarz
+  - Carlos Escolano
+  - Luis Montesano
+  - Gernot R. Müller-Putz
+  keywords:
+  - electroencephalogram
+  - Brain-Computer Interface
+  - reach-and-grasp
+  - movement-related cortical potential
+  - EEG systems
+  - mobile EEG
+  - dry electrodes
+  - BCI data set
+  license: CC-BY-4.0
+  publication_year: 2020
+  repository: BNCI Horizon 2020
+  senior_author: Gernot R. Müller-Putz
+experiment:
+  class_labels:
+  - palmar_grasp
+  - lateral_grasp
+  - rest
+  events:
+    lateral_grasp: 2
+    palmar_grasp: 1
+    rest: 3
+  feedback_type: visual (screen showing number of completed grasps)
+  has_training_test_split: true
+  instructions: Participants were instructed to focus their gaze on the designated object for 2 s before initiating the reach-and-grasp
+    action. Once they completed the grasp, they held the object for at least 1–2 s. When they returned their hand to the starting
+    position, a small insert on a screen showed them the number of grasps they had already performed on the designated object.
+    Participants paused at least for 4 s before starting a new trial (inter trial interval).
+  mode: execution
+  n_classes: 3
+  paradigm: imagery
+  primary_modality: visual
+  stimulus_modalities:
+  - visual
+  stimulus_type: physical objects (jar, spoon)
+  study_design: self-initiated reach-and-grasp actions
+  study_domain: natural movement
+  synchronicity: self-paced
+  task_type: reach-and-grasp
+  tasks:
+  - reach-and-grasp toward jar (palmar grasp)
+  - reach-and-grasp toward spoon (lateral grasp)
+  trials_per_class:
+    lateral_grasp: 80
+    palmar_grasp: 80
+external_links:
+  source: http://bnci-horizon-2020.eu/database/data-sets
+file_format: MAT
+methodology: Study participants performed self-initiated reach-and-grasp actions. They were instructed to rest their right
+  hand on a sensorized base position positioned in front of them. On the table, we placed an empty jar and a jar with a spoon
+  stuck in it. Both objects were in a comfortable reaching distance equidistant to the study participants' right hand. Participants
+  were instructed to perform reach-and-grasp actions using their right hand towards the objects placed on the table. In case
+  of the empty jar they grasped the objects using a palmar grasp. In case of the spoon, they were instructed to grasp the
+  spoon with a lateral grasp. Though participants performed the tasks in a self-initiated manner, we instructed them to focus
+  their gaze on the designated object for 2 s before initiating the reach-and-grasp action. Once they completed the grasp,
+  they held the object for at least 1–2 s. When they returned their hand to the starting position, a small insert on a screen
+  showed them the number of grasps they had already performed on the designated object. Participants paused at least for 4
+  s before starting a new trial (inter trial interval). 80 trials per condition were distributed over 4 runs of 20 trials
+  each. After each run, the position of the objects presented on the table was switched. Rest recordings (3 min) were performed
+  at the start, after the second movement run (at half time) and at the end of the experiment, where participants were tasked
+  to focus their gaze on a fixation point in the middle of the table.
+n_contributing_labs: 2
+paradigm_specific:
+  cue_duration_s: 2.0
+  detected_paradigm: motor_imagery
+  imagery_tasks:
+  - palmar grasp
+  - lateral grasp
+  n_targets: 2
+participants:
+  age_max: 30
+  age_min: 15
+  gender:
+    female: 5
+    male: 10
+  handedness: right-handed
+  health_status: healthy
+  n_subjects: 45
+  species: human
+performance:
+  accuracy_percent: 61.3
+  std: 8.6
+preprocessing:
+  artifact_methods:
+  - ICA
+  - amplitude threshold
+  - abnormal joint probability
+  - abnormal kurtosis
+  bandpass:
+  - 0.3
+  - 60.0
+  data_state: raw
+  downsampled_to_hz: 16.0
+  epoch_window:
+  - -2.0
+  - 3.0
+  filter_order: 4
+  filter_type: Butterworth
+  highpass_hz: 0.3
+  lowpass_hz: 60.0
+  notch_hz:
+  - 50
+  notes: Preprocessing applied during analysis, not to raw data. For gel-based and water-based recordings, extended infomax
+    ICA algorithm was applied on all available EEG and EOG channels. ICA was not applied to dry-electrode recordings due to
+    unfavorable number of channels (n=11).
+  preprocessing_steps:
+  - zero-phase 4th order Butterworth bandpass filter (0.3-60 Hz)
+  - extended infomax ICA for eye artifact removal
+  - artifact rejection by amplitude threshold (>125 µV)
+  - artifact rejection by abnormal joint probability (4 SD threshold)
+  - artifact rejection by abnormal kurtosis (4 SD threshold)
+  re_reference: CAR
+runs_per_session: 1
+sessions_per_subject: 1
+signal_processing:
+  classifiers:
+  - Shrinkage LDA
+  feature_extraction:
+  - LFTD
+  - MRCPs
+  - ERD
+  - ERS
+  - PSD
+  frequency_bands:
+    alpha:
+    - 8.0
+    - 12.0
+    analyzed_range:
+    - 2.0
+    - 40.0
+  spatial_filters:
+  - CAR
+tags:
+  modality:
+  - Visual
+  pathology:
+  - Healthy
+  type:
+  - Execution

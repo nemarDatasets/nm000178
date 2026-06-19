@@ -1,0 +1,193 @@
+BNCI2020-001
+============
+
+BNCI 2020-001 Reach-and-Grasp Electrode Comparison dataset.
+
+Dataset Overview
+----------------
+  Code: BNCI2020-001
+  Paradigm: imagery
+  DOI: 10.3389/fnins.2020.00849
+  Subjects: 45
+  Sessions per subject: 1
+  Events: palmar_grasp=503587, lateral_grasp=503588, rest=768
+  Trial interval: [-2, 3] s
+  File format: MAT
+  Contributing labs: Institute of Neural Engineering, Graz University of Technology, Bitbrain
+
+Acquisition
+-----------
+  Sampling rate: 256.0 Hz
+  Number of channels: 58
+  Channel types: eeg=58, eog=6
+  Channel names: C1, C2, C3, C4, C5, C6, CCP1h, CCP2h, CCP3h, CCP4h, CCP5h, CCP6h, CP1, CP2, CP3, CP4, CP5, CP6, CPP1h, CPP2h, CPP3h, CPP4h, CPP5h, CPP6h, CPz, Cz, EOGLBottom, EOGLSide, EOGLTop, EOGRBottom, EOGRSide, EOGRTop, F1, F2, F3, F4, FC1, FC2, FC3, FC4, FC5, FC6, FCC1h, FCC2h, FCC3h, FCC4h, FCC5h, FCC6h, FCz, FFC1h, FFC2h, FFC3h, FFC4h, Fz, P1, P2, P3, P4, P5, P6, POz, PPO1h, PPO2h, Pz
+  Montage: 5% grid system
+  Hardware: g.tec USBamp/g.tec Ladybird
+  Reference: right earlobe
+  Ground: AFz
+  Sensor type: Gel-based active electrodes
+  Line frequency: 50.0 Hz
+  Online filters: 8th order Chebyshev filter from 0.01 to 100 Hz, 50 Hz notch
+  Electrode type: active
+  Auxiliary channels: EOG (6 ch, horizontal, vertical)
+
+Participants
+------------
+  Number of subjects: 45
+  Health status: healthy
+  Age: min=15, max=30
+  Gender distribution: male=10, female=5
+  Handedness: right-handed
+  Species: human
+
+Experimental Protocol
+---------------------
+  Paradigm: imagery
+  Task type: reach-and-grasp
+  Number of classes: 3
+  Class labels: palmar_grasp, lateral_grasp, rest
+  Trials per class: palmar_grasp=80, lateral_grasp=80
+  Tasks: reach-and-grasp toward jar (palmar grasp), reach-and-grasp toward spoon (lateral grasp)
+  Study design: self-initiated reach-and-grasp actions
+  Study domain: natural movement
+  Feedback type: visual (screen showing number of completed grasps)
+  Stimulus type: physical objects (jar, spoon)
+  Stimulus modalities: visual
+  Primary modality: visual
+  Synchronicity: self-paced
+  Mode: execution
+  Training/test split: True
+  Instructions: Participants were instructed to focus their gaze on the designated object for 2 s before initiating the reach-and-grasp action. Once they completed the grasp, they held the object for at least 1–2 s. When they returned their hand to the starting position, a small insert on a screen showed them the number of grasps they had already performed on the designated object. Participants paused at least for 4 s before starting a new trial (inter trial interval).
+
+HED Event Annotations
+---------------------
+  Schema: HED 8.4.0 | Browse: https://www.hedtags.org/hed-schema-browser
+
+  palmar_grasp
+    ├─ Sensory-event, Experimental-stimulus, Visual-presentation
+    └─ Agent-action
+       └─ Imagine, Grasp, Hand
+
+  lateral_grasp
+    ├─ Sensory-event, Experimental-stimulus, Visual-presentation
+    └─ Agent-action
+       └─ Imagine
+          ├─ Grasp
+          ├─ Hand
+          └─ Label/lateral
+
+  rest
+    ├─ Sensory-event
+    ├─ Experimental-stimulus
+    ├─ Visual-presentation
+    └─ Rest
+
+Paradigm-Specific Parameters
+----------------------------
+  Detected paradigm: motor_imagery
+  Number of targets: 2
+  Imagery tasks: palmar grasp, lateral grasp
+  Cue duration: 2.0 s
+
+Data Structure
+--------------
+  Trials: 80
+  Trials per class: palmar_grasp=80, lateral_grasp=80, rest=81
+  Blocks per session: 4
+  Trials context: per_class
+
+Preprocessing
+-------------
+  Data state: raw
+  Preprocessing applied: False
+  Steps: zero-phase 4th order Butterworth bandpass filter (0.3-60 Hz), extended infomax ICA for eye artifact removal, artifact rejection by amplitude threshold (>125 µV), artifact rejection by abnormal joint probability (4 SD threshold), artifact rejection by abnormal kurtosis (4 SD threshold)
+  Highpass filter: 0.3 Hz
+  Lowpass filter: 60.0 Hz
+  Bandpass filter: [0.3, 60.0]
+  Notch filter: [50] Hz
+  Filter type: Butterworth
+  Filter order: 4
+  Artifact methods: ICA, amplitude threshold, abnormal joint probability, abnormal kurtosis
+  Re-reference: CAR
+  Downsampled to: 16.0 Hz
+  Epoch window: [-2.0, 3.0]
+  Notes: Preprocessing applied during analysis, not to raw data. For gel-based and water-based recordings, extended infomax ICA algorithm was applied on all available EEG and EOG channels. ICA was not applied to dry-electrode recordings due to unfavorable number of channels (n=11).
+
+Signal Processing
+-----------------
+  Classifiers: Shrinkage LDA
+  Feature extraction: LFTD, MRCPs, ERD, ERS, PSD
+  Frequency bands: alpha=[8.0, 12.0] Hz; analyzed=[2.0, 40.0] Hz
+  Spatial filters: CAR
+
+Cross-Validation
+----------------
+  Method: 10 times 5-fold cross-validation
+  Folds: 5
+  Evaluation type: within_subject
+
+Performance (Original Study)
+----------------------------
+  Accuracy: 61.3%
+  Std: 8.6
+
+BCI Application
+---------------
+  Applications: grasp neuroprosthesis, motor neuroprosthesis, robotic arm
+  Environment: laboratory
+  Online feedback: False
+
+Tags
+----
+  Pathology: Healthy
+  Modality: Visual
+  Type: Execution
+
+Documentation
+-------------
+  Description: This study investigated whether EEG-based correlates of natural reach-and-grasp actions can be successfully identified and decoded using mobile EEG systems (water-based EEG-Versatile and dry-electrodes EEG-Hero headset) and gel-based recordings obtained in a laboratory environment (g.USBamp/g.Ladybird, gold standard). For each recording system, 15 study participants performed 80 self-initiated reach-and-grasp actions toward a glass (palmar grasp) and a spoon (lateral grasp).
+  DOI: 10.3389/fnins.2020.00849
+  Associated paper DOI: 10.3389/fnins.2020.00849
+  License: CC-BY-4.0
+  Investigators: Andreas Schwarz, Carlos Escolano, Luis Montesano, Gernot R. Müller-Putz
+  Senior author: Gernot R. Müller-Putz
+  Contact: gernot.mueller@tugraz.at
+  Institution: Institute of Neural Engineering, Graz University of Technology
+  Department: Institute of Neural Engineering
+  Address: Graz, Austria
+  Country: Austria
+  Repository: BNCI Horizon 2020
+  Data URL: https://bnci-horizon-2020.eu/database/data-sets
+  Publication year: 2020
+  Funding: Horizon 2020 Project MoreGrasp
+  Ethics approval: Medical University of Graz (EK: 30-439 ex 17/18)
+  Keywords: electroencephalogram, Brain-Computer Interface, reach-and-grasp, movement-related cortical potential, EEG systems, mobile EEG, dry electrodes, BCI data set
+
+External Links
+--------------
+  Source: http://bnci-horizon-2020.eu/database/data-sets
+
+Abstract
+--------
+Reaching and grasping is an essential part of everybody's life, it allows meaningful interaction with the environment and is key to independent lifestyle. Recent electroencephalogram (EEG)-based studies have already shown that neural correlates of natural reach-and-grasp actions can be identified in the EEG. However, it is still in question whether these results obtained in a laboratory environment can make the transition to mobile applicable EEG systems for home use. In the current study, we investigated whether EEG-based correlates of natural reach-and-grasp actions can be successfully identified and decoded using mobile EEG systems, namely the water-based EEG-Versatile system and the dry-electrodes EEG-Hero headset. In addition, we also analyzed gel-based recordings obtained in a laboratory environment (g.USBamp/g.Ladybird, gold standard), which followed the same experimental parameters. For each recording system, 15 study participants performed 80 self-initiated reach-and-grasp actions toward a glass (palmar grasp) and a spoon (lateral grasp). Our results confirmed that EEG-based correlates of reach-and-grasp actions can be successfully identified using these mobile systems. In a single-trial multiclass-based decoding approach, which incorporated both movement conditions and rest, we could show that the low frequency time domain (LFTD) correlates were also decodable. Grand average peak accuracy calculated on unseen test data yielded for the water-based electrode system 62.3% (9.2% STD), whereas for the dry-electrodes headset reached 56.4% (8% STD). For the gel-based electrode system 61.3% (8.6% STD) could be achieved. To foster and promote further investigations in the field of EEG-based movement decoding, as well as to allow the interested community to make their own conclusions, we provide all datasets publicly available in the BNCI Horizon 2020 database.
+
+Methodology
+-----------
+Study participants performed self-initiated reach-and-grasp actions. They were instructed to rest their right hand on a sensorized base position positioned in front of them. On the table, we placed an empty jar and a jar with a spoon stuck in it. Both objects were in a comfortable reaching distance equidistant to the study participants' right hand. Participants were instructed to perform reach-and-grasp actions using their right hand towards the objects placed on the table. In case of the empty jar they grasped the objects using a palmar grasp. In case of the spoon, they were instructed to grasp the spoon with a lateral grasp. Though participants performed the tasks in a self-initiated manner, we instructed them to focus their gaze on the designated object for 2 s before initiating the reach-and-grasp action. Once they completed the grasp, they held the object for at least 1–2 s. When they returned their hand to the starting position, a small insert on a screen showed them the number of grasps they had already performed on the designated object. Participants paused at least for 4 s before starting a new trial (inter trial interval). 80 trials per condition were distributed over 4 runs of 20 trials each. After each run, the position of the objects presented on the table was switched. Rest recordings (3 min) were performed at the start, after the second movement run (at half time) and at the end of the experiment, where participants were tasked to focus their gaze on a fixation point in the middle of the table.
+
+References
+----------
+Schwarz, A., Escolano, C., Montesano, L., & Muller-Putz, G. R. (2020). Analyzing and Decoding Natural Reach-and-Grasp Actions Using Gel, Water and Dry EEG Systems. Frontiers in Neuroscience, 14, 849. https://doi.org/10.3389/fnins.2020.00849
+
+Notes
+
+.. versionadded:: 1.3.0
+
+This dataset is valuable for comparing electrode technologies in naturalistic movement paradigms. Data is available under CC BY 4.0 license.
+Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Hochenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896
+
+Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103. https://doi.org/10.1038/s41597-019-0104-8
+
+---
+Generated by MOABB 1.5.0dev0 (Mother of All BCI Benchmarks)
+https://github.com/NeuroTechX/moabb

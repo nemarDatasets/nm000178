@@ -1,0 +1,48 @@
+{
+	"TaskName": "imagery",
+	"Manufacturer": "g.tec USBamp/g.tec Ladybird",
+	"PowerLineFrequency": 50.0,
+	"SamplingFrequency": 256.0,
+	"SoftwareFilters": {
+		"preprocessing_steps": {
+			"Description": "zero-phase 4th order Butterworth bandpass filter (0.3-60 Hz), extended infomax ICA for eye artifact removal, artifact rejection by amplitude threshold (>125 \u00b5V), artifact rejection by abnormal joint probability (4 SD threshold), artifact rejection by abnormal kurtosis (4 SD threshold)"
+		}
+	},
+	"RecordingDuration": 2920.99609375,
+	"RecordingType": "continuous",
+	"EEGReference": "right earlobe",
+	"EEGGround": "AFz",
+	"EEGPlacementScheme": "5% grid system",
+	"EEGChannelCount": 32,
+	"EOGChannelCount": 0,
+	"ECGChannelCount": 0,
+	"EMGChannelCount": 0,
+	"TriggerChannelCount": 0,
+	"ManufacturersModelName": "g.tec USBamp/g.tec Ladybird",
+	"SoftwareVersions": "n/a",
+	"HardwareFilters": {
+		"Bandpass": {
+			"LowCutoffFrequency": 0.3,
+			"HighCutoffFrequency": 60.0,
+			"Type": "Butterworth",
+			"Order": 4
+		},
+		"Notch": {
+			"CutoffFrequency": [
+				50
+			]
+		}
+	},
+	"TaskDescription": "[reach-and-grasp] self-initiated reach-and-grasp actions cue: 2.0s.",
+	"Instructions": "Participants were instructed to focus their gaze on the designated object for 2 s before initiating the reach-and-grasp action. Once they completed the grasp, they held the object for at least 1\u20132 s. When they returned their hand to the starting position, a small insert on a screen showed them the number of grasps they had already performed on the designated object. Participants paused at least for 4 s before starting a new trial (inter trial interval).",
+	"CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+	"InstitutionName": "Institute of Neural Engineering, Graz University of Technology",
+	"InstitutionAddress": "Graz, Austria",
+	"InstitutionalDepartmentName": "Institute of Neural Engineering",
+	"CapManufacturer": "n/a",
+	"CapManufacturersModelName": "n/a",
+	"SubjectArtefactDescription": "n/a",
+	"DeviceSerialNumber": "n/a",
+	"Description": "This study investigated whether EEG-based correlates of natural reach-and-grasp actions can be successfully identified and decoded using mobile EEG systems (water-based EEG-Versatile and dry-electrodes EEG-Hero headset) and gel-based recordings obtained in a laboratory environment (g.USBamp/g.Ladybird, gold standard). For each recording system, 15 study participants performed 80 self-initiated reach-and-grasp actions toward a glass (palmar grasp) and a spoon (lateral grasp).",
+	"MISCChannelCount": 0
+}
