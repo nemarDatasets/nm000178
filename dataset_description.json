@@ -1,49 +1,50 @@
 {
-    "Name": "BNCI2020-001",
-    "BIDSVersion": "1.9.0",
-    "HEDVersion": "8.4.0",
-    "DatasetType": "derivative",
-    "License": "CC-BY-4.0",
-    "Authors": [
-        "Andreas Schwarz",
-        "Carlos Escolano",
-        "Luis Montesano",
-        "Gernot R. Müller-Putz"
-    ],
-    "Funding": [
-        "Horizon 2020 Project MoreGrasp"
-    ],
-    "EthicsApprovals": [
-        "Medical University of Graz (EK: 30-439 ex 17/18)"
-    ],
-    "ReferencesAndLinks": [
-        "https://bnci-horizon-2020.eu/database/data-sets",
-        "10.3389/fnins.2020.00849"
-    ],
-    "Keywords": [
-        "electroencephalogram",
-        "Brain-Computer Interface",
-        "reach-and-grasp",
-        "movement-related cortical potential",
-        "EEG systems",
-        "mobile EEG",
-        "dry electrodes",
-        "BCI data set"
-    ],
-    "DatasetDOI": "doi:10.3389/fnins.2020.00849",
-    "GeneratedBy": [
-        {
-            "CodeURL": "https://github.com/NeuroTechX/moabb",
-            "Name": "moabb",
-            "Description": "Mother of All BCI Benchmarks",
-            "Version": "1.5.0dev0"
-        }
-    ],
-    "SourceDatasets": [
-        {
-            "DOI": "10.3389/fnins.2020.00849",
-            "URL": "https://bnci-horizon-2020.eu/database/data-sets"
-        }
-    ],
-    "PublicationYear": 2020
+  "Name": "BNCI 2020-001 Reach-and-Grasp Electrode Comparison EEG dataset",
+  "BIDSVersion": "1.9.0",
+  "HEDVersion": "8.4.0",
+  "DatasetType": "derivative",
+  "License": "CC-BY-4.0",
+  "Authors": [
+    "Andreas Schwarz",
+    "Carlos Escolano",
+    "Luis Montesano",
+    "Gernot R. Müller-Putz"
+  ],
+  "Funding": [
+    "Horizon 2020 Project MoreGrasp"
+  ],
+  "EthicsApprovals": [
+    "Medical University of Graz (EK: 30-439 ex 17/18)"
+  ],
+  "ReferencesAndLinks": [
+    "https://bnci-horizon-2020.eu/database/data-sets",
+    "10.3389/fnins.2020.00849"
+  ],
+  "Keywords": [
+    "electroencephalogram",
+    "Brain-Computer Interface",
+    "reach-and-grasp",
+    "movement-related cortical potential",
+    "EEG systems",
+    "mobile EEG",
+    "dry electrodes",
+    "BCI data set"
+  ],
+  "DatasetDOI": "doi:10.3389/fnins.2020.00849",
+  "GeneratedBy": [
+    {
+      "CodeURL": "https://github.com/NeuroTechX/moabb",
+      "Name": "moabb",
+      "Description": "Mother of All BCI Benchmarks",
+      "Version": "1.5.0dev0"
+    }
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "10.3389/fnins.2020.00849",
+      "URL": "https://bnci-horizon-2020.eu/database/data-sets"
+    }
+  ],
+  "PublicationYear": 2020,
+  "Version": "1.0.1"
 }
