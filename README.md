@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.nm000178-blue)](https://doi.org/10.82901/nemar.nm000178)
+
 # BNCI 2020-001 Reach-and-Grasp Electrode Comparison EEG dataset
 
 ## Overview
