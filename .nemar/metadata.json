@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "validated",
+  "pipeline_stage": "enriched",
   "title": "BNCI 2020-001 Reach-and-Grasp Electrode Comparison EEG dataset",
-  "description": "This EEG dataset comprises recordings from 45 healthy participants performing self-initiated reach-and-grasp motor imagery tasks using three different electrode systems: gel-based laboratory equipment (g.tec USBamp/g.tec Ladybird), water-based mobile EEG (EEG-Versatile), and dry-electrode mobile EEG (EEG-Hero). Participants executed palmar and lateral grasp actions toward objects, with 58 EEG channels sampled at 256 Hz. The dataset enables comparative evaluation of neural correlates of natural reach-and-grasp actions across recording modalities and assessment of mobile EEG systems for brain-computer interface applications.",
-  "methods_description": "EEG data were acquired at 256 Hz from 58 channels using three systems: gel-based active electrodes (g.tec USBamp/g.tec Ladybird, reference: right earlobe, ground: AFz), water-based mobile EEG (EEG-Versatile), and dry-electrode mobile EEG (EEG-Hero). Online filtering included 8th order Chebyshev filter (0.01-100 Hz) and 50 Hz notch filter. Participants performed 80 self-initiated reach-and-grasp trials each toward a glass (palmar grasp) and spoon (lateral grasp) in self-paced mode with visual feedback. Offline preprocessing included 4th order Butterworth bandpass filtering (0.3-60 Hz), extended infomax ICA for artifact removal (gel-based and water-based systems), amplitude thresholding (>125 µV), abnormal joint probability (4 SD), and abnormal kurtosis (4 SD) rejection. Data were re-referenced to common average reference and downsampled to 16 Hz.",
+  "description": "This dataset comprises EEG recordings from 15 healthy participants performing self-initiated reach-and-grasp motor tasks using three different recording systems: gel-based laboratory equipment, water-based mobile EEG, and dry-electrode mobile EEG. Data were acquired at 256 Hz from 58 EEG channels plus 6 EOG channels across three sessions with a total of 7,200 trials. Participants executed palmar and lateral grasp actions toward objects while EEG signals were recorded. The study investigates the feasibility of decoding natural reach-and-grasp neural correlates across different EEG acquisition modalities for brain-computer interface applications.",
+  "methods_description": "EEG data were acquired at 256 Hz sampling rate using 58 EEG channels and 6 EOG channels with a 5% grid system montage. Three recording systems were employed: gel-based active electrodes (g.tec USBamp/g.Ladybird, reference: right earlobe, ground: AFz), water-based mobile EEG (EEG-Versatile), and dry-electrode mobile EEG (EEG-Hero). Online filtering included 8th order Chebyshev filter (0.01-100 Hz) and 50 Hz notch filter. Participants performed 80 self-initiated reach-and-grasp trials each for palmar grasp (toward glass) and lateral grasp (toward spoon) with 2-second fixation period, 1-2 second hold, and 4-second inter-trial interval. Offline preprocessing included 4th order Butterworth bandpass filtering (0.3-60 Hz), extended infomax ICA for artifact removal (applied to gel-based and water-based systems; not applied to dry-electrode recordings due to unfavorable channel count), amplitude thresholding (>125 µV), and abnormal joint probability/kurtosis rejection (4 SD threshold).",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -24,10 +24,13 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
     },
     {
-      "term": "motor imagery"
+      "term": "reach-and-grasp"
     },
     {
-      "term": "reach-and-grasp"
+      "term": "palmar grasp"
+    },
+    {
+      "term": "lateral grasp"
     },
     {
       "term": "movement-related cortical potential"
@@ -36,7 +39,22 @@
       "term": "mobile EEG"
     },
     {
+      "term": "gel electrodes"
+    },
+    {
+      "term": "water-based electrodes"
+    },
+    {
       "term": "dry electrodes"
+    },
+    {
+      "term": "electrode comparison"
+    },
+    {
+      "term": "EEG systems comparison"
+    },
+    {
+      "term": "MOABB benchmark"
     }
   ],
   "related_identifiers": [
@@ -54,6 +72,11 @@
       "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000178",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.3389/fnhum.2022.898300",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
     }
   ],
   "funding_references": [
@@ -61,6 +84,10 @@
       "funder_name": "European Commission",
       "award_number": "MoreGrasp",
       "award_title": "Horizon 2020 Project MoreGrasp"
+    },
+    {
+      "funder_name": "European Commission",
+      "award_number": "GA-823344"
     }
   ],
   "resource_type_general": "Dataset",
@@ -79,5 +106,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "5b0704fed60b4f69df25c9656c6a54dd4c3ff026fc0b03874bac5865cf316af3"
+  "source_hash": "e297bedcc5c4ac56d60bacfad855ced12fc3cceb8837ba785099f47b0647640b"
 }
