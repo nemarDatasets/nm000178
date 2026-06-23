@@ -30,7 +30,7 @@
     "dry electrodes",
     "BCI data set"
   ],
-  "DatasetDOI": "doi:10.3389/fnins.2020.00849",
+  "DatasetDOI": "10.82901/nemar.nm000178",
   "GeneratedBy": [
     {
       "CodeURL": "https://github.com/NeuroTechX/moabb",
@@ -43,6 +43,9 @@
     {
       "DOI": "10.3389/fnins.2020.00849",
       "URL": "https://bnci-horizon-2020.eu/database/data-sets"
+    },
+    {
+      "DOI": "doi:10.3389/fnins.2020.00849"
     }
   ],
   "PublicationYear": 2020,
