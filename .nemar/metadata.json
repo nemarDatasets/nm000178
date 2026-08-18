@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "BNCI 2020-001 Reach-and-Grasp Electrode Comparison EEG dataset",
-  "description": "This dataset comprises EEG recordings from 15 healthy participants performing self-initiated reach-and-grasp motor imagery tasks using three different recording systems: gel-based laboratory equipment, water-based mobile EEG, and dry-electrode mobile EEG. Each participant completed 3 sessions (45 total recordings: 15 subjects × 3 sessions). With 58 EEG channels and 6 EOG channels sampled at 256 Hz, the dataset investigates the feasibility of decoding natural reach-and-grasp neural correlates across different EEG acquisition modalities for brain-computer interface applications.",
-  "methods_description": "EEG data were acquired at 256 Hz sampling rate using 58 EEG channels and 6 EOG channels (64 total) with a 5% grid system montage across three recording systems: gel-based active electrodes (g.tec USBamp/g.Ladybird, reference: right earlobe, ground: AFz), water-based mobile EEG (EEG-Versatile), and dry-electrode mobile EEG (EEG-Hero). Online filtering included 8th order Chebyshev filter (0.01-100 Hz) and 50 Hz notch filter. Participants performed 80 self-initiated reach-and-grasp trials each for palmar grasp (toward glass) and lateral grasp (toward spoon) with 2-second fixation period, 1-2 second hold, and 4-second inter-trial interval. Offline preprocessing included 4th order Butterworth bandpass filtering (0.3-60 Hz), extended infomax ICA for artifact removal (applied to gel-based and water-based systems; not applied to dry-electrode recordings due to unfavorable channel count), amplitude thresholding (>125 µV), and abnormal joint probability/kurtosis rejection (4 SD threshold).",
+  "description": "This dataset comprises EEG recordings from 45 healthy participants performing reach-and-grasp motor imagery tasks using three different electrode systems: gel-based laboratory equipment, water-based mobile EEG, and dry-electrode mobile EEG. Data were acquired at 256 Hz from 58 EEG channels plus 6 EOG channels across three sessions with 7200 total trials. Participants executed palmar grasp (toward glass) and lateral grasp (toward spoon) actions. The study investigates the feasibility of decoding natural reach-and-grasp neural correlates across different EEG acquisition modalities for brain-computer interface applications.",
+  "methods_description": "EEG data were acquired at 256 Hz sampling rate using 58 EEG channels and 6 EOG channels with a 5% grid system montage across three recording systems: gel-based active electrodes (g.tec USBamp/g.Ladybird, reference: right earlobe, ground: AFz), water-based mobile EEG (EEG-Versatile), and dry-electrode mobile EEG (EEG-Hero). Online filtering included 8th order Chebyshev filter (0.01-100 Hz) and 50 Hz notch filter. Participants performed 80 self-initiated reach-and-grasp trials each for palmar grasp (toward glass) and lateral grasp (toward spoon) with 2-second fixation period, 1-2 second hold, and 4-second inter-trial interval. Offline preprocessing included 4th order Butterworth bandpass filtering (0.3-60 Hz), extended infomax ICA for artifact removal (applied to gel-based and water-based systems; not applied to dry-electrode recordings due to unfavorable channel count), amplitude thresholding (>125 µV), and abnormal joint probability/kurtosis rejection (4 SD threshold).",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -42,10 +42,7 @@
       "term": "electrode comparison"
     },
     {
-      "term": "EEG modality comparison"
-    },
-    {
-      "term": "benchmark"
+      "term": "EEG systems comparison"
     },
     {
       "term": "MOABB"
@@ -78,11 +75,6 @@
       "funder_name": "European Commission",
       "award_number": "MoreGrasp",
       "award_title": "Horizon 2020 Project MoreGrasp"
-    },
-    {
-      "funder_name": "European Commission",
-      "award_number": "GA 823344",
-      "award_title": "Horizon 2020 Project MoreGrasp"
     }
   ],
   "resource_type_general": "Dataset",
@@ -102,5 +94,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "23b2963a17f42423196c6fd7aa234dcc99b09aa49df594cd8e47ef5b515db0f2"
+  "source_hash": "df620ceaf8b0c37dbe1ee4f07bb7aecc580508f9a8871159053b9a6c7d78d78b"
 }
