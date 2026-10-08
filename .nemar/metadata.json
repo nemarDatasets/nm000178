@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "BNCI 2020-001 Reach-and-Grasp Electrode Comparison EEG dataset",
-  "description": "EEG recordings from healthy participants performing self-initiated natural reach-and-grasp actions (palmar and lateral grasps) with three recording systems: gel-based laboratory EEG, water-based mobile EEG, and dry-electrode mobile EEG. The movements were actually executed, not imagined. The dataset supports comparison of electrode technologies for decoding movement-related cortical activity in brain-computer interface applications. It is described in Schwarz et al. (2020, Frontiers in Neuroscience) and provided in BIDS format through the MOABB benchmark collection.",
-  "methods_description": "EEG was recorded at 256 Hz from 58 EEG and 6 EOG channels using a 5% grid montage with gel-based (g.tec USBamp/g.Ladybird), water-based (EEG-Versatile) and dry-electrode (EEG-Hero) systems. Participants performed 80 self-initiated palmar and 80 lateral reach-and-grasp trials each. Offline preprocessing included 0.3-60 Hz Butterworth bandpass filtering, extended infomax ICA for gel and water systems, amplitude thresholding, and joint probability/kurtosis-based rejection.",
+  "description": "EEG recordings from healthy participants performing self-initiated palmar and lateral reach-and-grasp actions, acquired with three systems: gel-based laboratory EEG, water-based mobile EEG, and dry-electrode mobile EEG. The dataset supports study of the feasibility of decoding natural reach-and-grasp movement-related cortical potentials across acquisition modalities for brain-computer interfaces. The primary publication is Schwarz et al. (2020), Frontiers in Neuroscience (10.3389/fnins.2020.00849). It is distributed in BIDS format through the MOABB benchmark collection; the 2020 International BCI Competition review (10.3389/fnhum.2022.898300) is a related reference, not the data paper.",
+  "methods_description": "EEG was recorded at 256 Hz from 58 EEG and 6 EOG channels in a 5% grid montage using g.tec USBamp/g.Ladybird (gel), EEG-Versatile (water) and EEG-Hero (dry) systems. Participants performed 80 self-initiated palmar and lateral grasp trials each. Online filtering used a Chebyshev 0.01-100 Hz band and a 50 Hz notch. Offline preprocessing included 0.3-60 Hz Butterworth filtering, infomax ICA (gel and water systems only), amplitude thresholding, and joint probability/kurtosis rejection.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -14,12 +14,12 @@
   },
   "keywords": [
     {
-      "term": "EEG"
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH"
     },
     {
       "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+      "subject_scheme": "MeSH"
     },
     {
       "term": "reach-and-grasp"
@@ -88,5 +88,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "df620ceaf8b0c37dbe1ee4f07bb7aecc580508f9a8871159053b9a6c7d78d78b"
+  "source_hash": "d86b1865db2fc59bf6d37299c9b244bb2d447ad1c4d07244f14484b45c3c15bf"
 }
